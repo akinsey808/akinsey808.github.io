@@ -4,8 +4,8 @@
 }
 
 @font-face {
-	font-family: "Poppins", sans-serif;
-	src: url(Poppins.ttf);
+	font-family: "poppins-light", sans-serif;
+	src: url(/fonts/Poppins-Light.ttf);
 	font-weight: 300;
 	font-style: normal;
 }
@@ -114,7 +114,7 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	font-family: poppins-light;
+	font-family: "poppins-light";
 	font-size: 5vw;	
 }
 
