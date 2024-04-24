@@ -1,12 +1,17 @@
 @font-face {
-    font-family: BrownBagLunch;
-    src: url(BrownBagLunch.ttf);
+	font-family: BrownBagLunch;
+	src: url(BrownBagLunch.ttf);
 }
 
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+@font-face {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+.poppins-light {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: italic;
 }
 
 body {
@@ -25,23 +30,23 @@ body {
 	right: 0;
 	top: 0;
 	bottom: 0;
-  left: 15.5vw;
+	left: 15.5vw;
 }
 
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back, .front img, .back img {
 	width: 20vw;
 	height: 20vw;
 	position: absolute;
-
 }
 
 /* flip speed goes here */
@@ -55,14 +60,13 @@ body {
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
 	font-family: 'Poiret One';
 	font-weight: bold;
 	font-size: 1.1vw;
-  box-shadow: 1vw 1vw 0.5vw lightblue;
+	box-shadow: 1vw 1vw 0.5vw lightblue;
 	overflow: hidden;
 	border-radius: 4vw;
 	border: 1px solid lightblue;
@@ -76,7 +80,7 @@ body {
 /* front pane, placed above back */
 .front {
 	z-index: 2;
-	/* for firefox 31 */
+/* for firefox 31 */
 	transform: rotateY(0deg);
 }
 
@@ -86,7 +90,7 @@ body {
 }
 
 .p1 {
-	top:1vw;
+	top: 1vw;
 	left: 1vw;
 }
 
@@ -114,8 +118,8 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	font-family: poppins-light-italic;
-  font-size: 5vw;	
+	font-family: poppins-light;
+	font-size: 5vw;	
 }
 
 #title2 {
@@ -172,7 +176,7 @@ body {
  
 .fade-out {
 	opacity:1;  /* make things visible upon start */
-	-webkit-animation:fadeOut ease-in 1;  /* call our keyframe named fadeOut, use animattion ease-in and repeat it only 1 time */
+	-webkit-animation:fadeOut ease-in 1;  /* call our keyframe named fadeOut, use animation ease-in and repeat it only 1 time */
 	-moz-animation:fadeOut ease-in 1;
 	animation:fadeOut ease-in 1;
  
@@ -185,7 +189,6 @@ body {
 	animation-duration:1s;
 
 }
-
 
 
 
