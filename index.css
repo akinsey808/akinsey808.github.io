@@ -5,13 +5,9 @@
 
 @font-face {
 	font-family: "Poppins", sans-serif;
+	src: url(Poppins.ttf);
 	font-weight: 300;
-	font-style: italic;
-}
-.poppins-light {
-	font-family: "Poppins", sans-serif;
-	font-weight: 300;
-	font-style: italic;
+	font-style: normal;
 }
 
 body {
