@@ -3,6 +3,12 @@
     src: url(BrownBagLunch.ttf);
 }
 
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 body {
 	overflow: hidden;
 }
@@ -108,7 +114,7 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	font-family: 'Tangerine', serif;
+	font-family: poppins-light-italic;
   font-size: 5vw;	
 }
 
