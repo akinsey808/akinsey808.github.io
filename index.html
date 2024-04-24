@@ -1,441 +1,402 @@
-<html>
-  <head>
-    <link rel="stylesheet" 
-        type="text/css" 
-        href="main.css">
-    <link rel="stylesheet" 
-        type="text/css" 
-        href="index.css">
-    <link rel="stylesheet" 
-        type="text/css"
-        href="https://fonts.googleapis.com/css?family=Tangerine">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <link rel="stylesheet" 
-    	type="text/css"
-        href="https://fonts.googleapis.com/css?family=Poiret+One">
-    <link rel="stylesheet" 
-        type="text/css"
-        href="https://fonts.googleapis.com/css?family=Brown+Bag+Lunch">
-  </head>
-  <body>
-    <div id="left">
-      <div style="position:relative;
-                  margin-top: 20vw">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
-						<defs>
-							<filter id="filter-goo-2">
-								<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-								<feComposite in="SourceGraphic" in2="goo" />
-							</filter>
-						</defs>
-					</svg>
-					<button 
-            id="grades-button" 
-            onclick="buttonClick('grades')"
-            class="button button--2" 
-            style="position:absolute; left:4vw; top:5vw">
-						Grades
-						<span class="button__bg"></span>
-					</button>
+@font-face {
+	font-family: BrownBagLunch;
+	src: url(BrownBagLunch.ttf);
+}
 
-						<defs>
-							<filter id="filter-goo-2">
-								<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-								<feComposite in="SourceGraphic" in2="goo" />
-							</filter>
-						</defs>
-					</svg>
-					<button 
-            id="skills-button" 
-            onclick="buttonClick('skills')"
-            class="button button--2" 
-            style="position:absolute; left:4vw; top:10vw">
-						Skills
-						<span class="button__bg"></span>
-					</button>
+body {
+	overflow: hidden;
+}
 
-						<defs>
-							<filter id="filter-goo-2">
-								<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-								<feComposite in="SourceGraphic" in2="goo" />
-							</filter>
-						</defs>
-					</svg>
-					<button 
-            id="advice-button" 
-            onclick="buttonClick('advice')"
-            class="button button--2" 
-            style="position:absolute; left:4vw; top:15vw">
-						Advice
-						<span class="button__bg"></span>
-					</button>
+#left {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 15.5vw;
+}
 
-						<defs>
-							<filter id="filter-goo-2">
-								<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-								<feComposite in="SourceGraphic" in2="goo" />
-							</filter>
-						</defs>
-					</svg>
-					<button 
-            id="service-button" 
-            onclick="buttonClick('service')"
-            class="button button--2" 
-            style="position:absolute; left:4vw; top:20vw">
-						Service
-						<span class="button__bg"></span>
-					</button>
+#right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 15.5vw;
+}
 
-    </div>
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
 
-    </div>
-    <div id="right">
-      <div id="title">Anabel Kinsey</div>
-      <div id="title2">By Anabel Kinsey</div>
-      <div id="grades" class="page">
-        <div
-          id="grades-p1"
-          class="p1 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/grades/kinder_picture.JPG" 
-                  alt="picture of me reading in kindergarten">
-            </div>
-            <div class="back">
-            In kindergarten, I started to understand that I love learning. 
-            I was learning to create and share. I had to become accustomed to others
-            and to be kind. It was a time of discovery.
-            </div>
-          </div>
-        </div>
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
 
+.flip-container, .front, .back, .front img, .back img {
+	width: 20vw;
+	height: 20vw;
+	position: absolute;
+}
 
-        <div 
-          id="grades-p2"
-          class="p2 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/grades/first_picture.JPG" 
-                  alt="picture of me hiking in 1st grade">
-            </div>
-            
-            <div class="back">
-            In first grade, I was exploring nature and the wonders of the world. 
-            I was spreading my borders and learning about myself. I also enjoyed 
-            learning a lot about science. This was a time of self-expansion and 
-            additions to my knowing.  
-            </div>
-          </div>
-        </div>
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
 
-        <div 
-          id="grades-p3"
-          class="p3 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/grades/second_picture.JPG" 
-                  alt="picture of me upside down in 2nd grade">
-            </div>
-            <div class="back">
-            In second grade, I was learning that I love to go "above" and beyond. After I
-            established my limits and boundaries, I started exploring them. I was also 
-            getting ahead of my peers and decided to homechool the next year. Second grade was 
-            my time to look around at what I had inside of me.
-            </div>
-          </div>
-        </div>
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'Poiret One';
+	font-weight: bold;
+	font-size: 1.1vw;
+	box-shadow: 1vw 1vw 0.5vw lightblue;
+	overflow: hidden;
+	border-radius: 4vw;
+	border: 1px solid lightblue;
+}
 
+.back {
+	padding: 2vw;
+	box-sizing: border-box;
+}
 
-        <div 
-          id="grades-p4"
-          class="p4 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/grades/fourth_picture.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-            Returning to Wai'alae in fourth grade, I made some steadfast friendships
-            and had a lot of fun doing things like the Big Island Trip. I also 
-            found waysto keep myself challenged. It was a time of rebuilding my 
-            Wai'alae experience.
-            
-            </div>
-          </div>
-        </div>
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+/* for firefox 31 */
+	transform: rotateY(0deg);
+}
 
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
 
-        <div 
-          id="grades-p5"
-          class="p5 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/grades/fifth_picture.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-            In fifth grade, I am nurturing my specific interests and 
-            hobbies, inspired by my school experiences. I got to go on an amazing 
-            Secret Field Trip and having fun with friends. It has been a great last
-            year!
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-      <div id="skills" class="page">
-        
-        <div 
-          id="skills-p1"
-          class="p1 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/skillz/hulapic.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-             Hula was always important at Wai'alae. In fact, we began learning the Aloha 
-        'Oli in the first week of school. I have improved heavily over the years and it is 
-        a very useful skill for living in Hawai'i. This skill helped me to become a well-rounded
-        individual.
-    
-            </div>
-          </div>
-        </div>
-        
-        
-        <div 
-          id="skills-p2"
-          class="p2 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/skillz/ukulele.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-        At Wai'alae 'ukulele was always known. You would make sure to keep you grades up
-        in music so 'ukulele was easy. Then, we were always excited for the chance to 
-        be recognized for being in 'Ukulele Band. When you finally got to start playing in 4th
-        grade we wore the correct shirts and made sure not to forget our binders. This skill
-        helped me to be capable of multiple dimesions.
-            </div>
-          </div>
-        </div>
-        
-        <div 
-          id="skills-p3"
-          class="p3 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/skillz/HourOfCode.png" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-        I first started loving to program when I did Hour Of Code. One hour is not 
-        enough! We had Hour of Code acople of times, all of wich I enjoyed but were 
-        unchallenging. Which is probably why I was inspired to do this website. Hour of
-        Code helped me to become a creative problem solver.
-            </div>
-          </div>
-        </div>
-        
-        <div 
-          id="skills-p4"
-          class="p4 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/skillz/gardening.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-        Gardening was a huge part of my love for nature, especially the butterfly garden
-        in kindergarten. We had 'Aina Is and garden parties. We ate the outcomes of 
-        our own hard work and watched catepillars grow in the crownflower bush. We had to 
-        work together to make it work. Gardening helped me to become collaborative.
-            </div>
-          </div>
-        </div>
-        
-        <div 
-          id="skills-p5"
-          class="p5 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/skillz/creativity.png" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-        Creativity. It isn't a subject or even an activity. It was a way of thinking.
-        The way of letting your mind do its job. It was always subtly taught. Our teachers 
-        never told us what to do in math projects. Everything was worked with or as a side
-        effect of creativity. This helped me to become socially responsible and self-confident.
-            </div>
-          </div>
-        </div>
+.p1 {
+	top: calc(50% - 10vw);
+	left: calc(2%);
+}
 
-              </div>
-      <div id="advice" class="page">
+.p2 {
+	top: calc(50% - 10vw);
+	right: 2vw;
+}
 
-        
-        <div id="bg" style="left:10vw; width:default;"></div>
-<div class="contact" style="transform: scale(4)">
-	<div class="envelope">
-		<div class="top">
-			<div class="outer"><div class="inner"></div></div>
-		</div>
-		<div class="bottom"></div>
-		<div class="left"></div>
-		<div class="right"></div>
-		<div class="cover"></div>
-		<div class="paper" style="font-size: 6px; padding-top:0; 	font-family: 'BrownBagLunch';">
-              Dear Anabel, <br>
-        This is a letter from your future self. A version of you who has been through a lot more. I am writing
-        to give you some advice. 1) Do not stress! Have fun, it's only the first few years of your life. Everything
-        will follow through. 2) Make good friends. I know you did, but you don't want to be friendless now, trust me. 3) 
-        Don't try to change who you are/ stay weird. Nothing is as important as you being you. You were born as yourself.
-        And that is how the world wants you. I hope, if this ever gets to you, you take it seriously. You are so mportant 
-        to me. I mean, you are me so...<br><br>
-        <div style="text-align: center">Love, your futuristic self/ big sister you never had,</div><br>
-        <div style="text-align: center">Anabel</div>
-		</div>
-	</div>
-</div>
+.p3 {
+	bottom: 3vw;
+	left: 1vw;
+}
 
+.p4 {
+	bottom: 3vw;
+	right: 2vw;
+}
 
-      </div>
-      <div id="service" class="page">
+.p5 {
+	top: calc(50% - 10vw);
+	left: calc(50% - 10vw);
+}
 
+#title, #title2 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-size: 9vw;	
+	top: 1vw;
+}
 
-        <div 
-          id="service-p1"
-          class="p1 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/service/butonsandboots.jpg" 
-                  alt="picture of buttons and boots">
-            </div>
-            <div class="back">
-            One of the first animals I fostered were Buttons and Boots, the adorable twin kitties! They were
-            quite the duo. On multiple occasions we would find them hanging from the tops of the kennel roof. I, of
-            course, couldn't, for the life of me think of names. So, inanimate objects they were.
-            I alo named our chicken Dumpling. Tsk tsk tsk. Buttons and Boots were very hard to say goodbye to.
-    
-            </div>
-          </div>
-        </div>
-        
-        
-        <div 
-          id="service-p2"
-          class="p2 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/service/kittens.jpg" 
-                  alt="picture of litter">
-            </div>
-            <div class="back">
-        On an especially stormy night, a family contacted us to take a stray litter of 5 kittens. We hurried on over.
-        They were absolutely adorable. Quite a coincedence, but our beloved cat, Alana, had just passed away. So, we 
-        couldn't resist but to keep two of them, Pteradactyl and Spica. (Actually, they're on my lap as I write this.)
-        
-            </div>
-          </div>
-        </div>
-        
-        <div 
-          id="service-p3"
-          class="p3 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/service/puggies.jpg" 
-                  alt="picture of the puggies">
-            </div>
-            <div class="back">
-        Our uncle, who breeds pugs, was having trouble with a mother, Chin Chin. Other than being a bad mother, she 
-        was really sweet. Yet, she would'nt pay attention to any of her nine 
-        offspring, and they all died. So, we took the next litter. She had five puggies (pug pupies), all healthy because
-        our love and compassion (and long nights) paid off! We begged to keep one but, alas we couldn't.<!--I think
-        that that birth was a good experience for me. -->
-            </div>
-          </div>
-        </div>
-        
-        <div 
-          id="service-p4"
-          class="p4 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/service/pyp.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-        Pyp. Cute, wonderful pyp. He is a tiny, yet dominant teacup chiuaua. 
-        At first sight, we could not give him back. He was barely four pounds and we were 
-        supposed o fatten him up. For two weeks. We still have him. Like I said, we just could not give him 
-        back and adopted him. Also, the spelling is because our liscense plate uses it. Love at first sight, I say!
-            </div>
-          </div>
-        </div>
-        
-        <div 
-          id="service-p5"
-          class="p5 flip-container" 
-          ontouchstart="this.classList.toggle('hover');"
-        >
-        <div class="flipper">
-          <div class="front">
-              <img src="images/service/guineapig.jpg" 
-                  alt="picture of me on a log in 4th grade">
-            </div>
-            <div class="back">
-        My service learning project was to complete 10 hours of foster care for needy ainimals. This was 
-        a project to contribute to the community. I chose this project because I regularily foster animals. I 
-        succesfully completed it! This is a picture of a guinea pig rescued with badlice from a hoarder. 
-            </div>
-          </div>
-        </div>
+#title2 {
+	top: 12vw;
+	font-size:4vw;
+}
 
-              </div>
+.page {
+ 	opacity: 0;
+ 	pointer-events: none;
+}
 
+.active-page {
+	opacity: 1;
+	pointer-events: auto;
+}
 
+.pt-page-flipOutRight {
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-animation: flipOutRight .5s both ease-in;
+	animation: flipOutRight .5s both ease-in;
+}
+.pt-page-flipInLeft {
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-animation: flipInLeft .5s both ease-out;
+	animation: flipInLeft .5s both ease-out;
+}
 
-    </div>
-		<script src="TweenMax.min.js"></script>
-    <script src="index.js"></script>
-    
-  </body>
-</html>
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+ 
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+ 
+.fade-out {
+	opacity:1;  /* make things visible upon start */
+	-webkit-animation:fadeOut ease-in 1;  /* call our keyframe named fadeOut, use animation ease-in and repeat it only 1 time */
+	-moz-animation:fadeOut ease-in 1;
+	animation:fadeOut ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 0)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+#bg {
+	position: absolute;
+	left: 30vw;
+	top: 20vw;
+	height: 100%;
+		
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iNDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==); background: -moz-radial-gradient(center, ellipse cover,  #ffffff 40%, #bbbbbb 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#ffffff), color-stop(100%,#bbbbbb)); background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 40%,#bbbbbb 100%); background: -o-radial-gradient(center, ellipse cover,  #ffffff 40%,#bbbbbb 100%); background: -ms-radial-gradient(center, ellipse cover,  #ffffff 40%,#bbbbbb 100%); background: radial-gradient(ellipse at center,  #ffffff 40%,#bbbbbb 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bbbbbb',GradientType=1 );
+}
+.contact {
+		position: absolute;
+		left: 50%;
+		top: 58%;
+		margin-left: -125px;
+		margin-top: -125px;
+		height: 250px;
+		width: 250px;
+		
+		border-radius: 2px;
+		-ms-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-o-border-radius: 2px;
+		-webkit-border-radius: 2px;
+}
+.contact .envelope {
+		position: absolute;
+		height: 93px;
+		width: 165px;
+		left: 50%;
+		margin-left: -83px;
+		top: 50%;
+		margin-top: -50px;
+		background: #F9F9F9;
+		
+		transition: margin-top 300ms;
+		-ms-transition: margin-top 300ms;
+		-moz-transition: margin-top 300ms;
+		-o-transition: margin-top 300ms;
+		-webkit-transition: margin-top 300ms;
+}
+.contact:hover .envelope {
+		transition-delay: 150ms;
+		-ms-transition-delay: 150ms;
+		-moz-transition-delay: 150ms;
+		-o-transition-delay: 150ms;
+		margin-top: -20px;
+}
+.contact .envelope .top {
+		position: absolute;
+		top: -3px;
+		left: 0px;
+		width: 100%;
+		height: 73px;
+		z-index: 30;
+		overflow: hidden;
+						
+		transform-origin: top;
+		-ms-transform-origin: top;
+		-moz-transform-origin: top;
+		-o-transform-origin: top;
+		-webkit-transform-origin: top;
+					
+		transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+		-ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+		-moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+		-o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+		-webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+}
+.contact:hover .envelope .top {
+		transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+		-ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+		-moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+		-o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+		-webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+		
+		height: 10px;
+		top: -60px;
+		
+		transform: rotateX(180deg);
+		-ms-transform: rotateX(180deg);
+		-moz-transform: rotateX(180deg);
+		-o-transform: rotateX(180deg);
+		-webkit-transform: rotateX(180deg);
+}
+.contact .envelope .outer {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		border-left: 83px solid transparent;
+		border-right: 82px solid transparent;
+		border-top: 70px solid #EEE;
+}
+.contact .envelope .outer .inner {
+		position: absolute;
+		left: -81px;
+		top: -73px;
+		border-left: 81px solid transparent;
+		border-right: 80px solid transparent;
+		border-top: 68px solid #333;
+}
+.contact .envelope .bottom {
+		position: absolute;
+		z-index: 20;
+		bottom: 0px;
+		left: 2px;
+		border-left: 81px solid transparent;
+		border-right: 80px solid transparent;
+		border-bottom: 45px solid #333;
+}
+.contact .envelope .left {
+		position: absolute;
+		z-index: 20; top: 0px;
+		left: 0px;
+		border-left: 81px solid #333;
+		border-top: 45px solid transparent;
+		border-bottom: 45px solid transparent;
+}
+.contact .envelope .right {
+		position: absolute;
+		z-index: 20;
+		top: 0px;
+		right: 0px;
+		border-right: 80px solid #333;
+		border-top: 45px solid transparent;
+		border-bottom: 45px solid transparent;
+}
+.contact .envelope .cover {
+		position: absolute;
+		z-index: 15;
+		bottom: 0px;
+		left: 0px;
+		height: 55%;
+		width: 100%;
+		background: #EEE;
+}
+.contact .envelope .paper {
+		font-family: 'BrownBagLunch';
+		position: absolute;
+		height: 83px;
+		padding-top: 10px;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		background: #F9F9F9;
+		z-index: 10;
+		transition: margin-top 300ms 0ms;
+		-ms-transition: margin-top 300ms 0ms;
+		-moz-transition: margin-top 300ms 0ms;
+		-o-transition: margin-top 300ms 0ms;
+		-webkit-transition: margin-top 300ms 0ms;
+}
+.contact:hover .envelope .paper {
+		margin-top: -60px;
+		transition: margin-top 300ms 150ms;
+		-ms-transition: margin-top 300ms 150ms;
+		-moz-transition: margin-top 300ms 150ms;
+		-o-transition: margin-top 300ms 150ms;
+		-webkit-transition: margin-top 300ms 150ms;
+}
+.contact .envelope .paper a {
+		position: relative;
+		display: block;
+		font-size: 14px;
+		margin: 5px;
+		margin-bottom: 0px;
+		text-align: center;
+		color: #333;
+		text-decoration: none;
+}
+.contact .envelope .paper a.call .i {
+		position: absolute;
+		top: 2px;
+		left: 20px;
+		display: inline-block;
+		width: 3px;
+		height: 5px;
+		border-width: 5px 0 5px 2px;
+		border-style: solid;
+		border-color: #555;
+		background: transparent;
+		
+		transform: rotate(-30deg);
+		-ms-transform: rotate(-30deg);
+		-moz-transform: rotate(-30deg);
+		-o-transform: rotate(-30deg);
+		-webkit-transform: rotate(-30deg);
+
+		border-top-left-radius: 3px 5px;
+		border-bottom-left-radius: 3px 5px;
+		-moz-border-radius-topleft: 3px 5px;
+		-moz-border-radius-bottomleft: 3px 5px;
+		-webkit-border-top-left-radius: 3px 5px;
+		-webkit-border-bottom-left-radius: 3px 5px;
+																																				
+		transition: border-color 300ms;
+		-ms-transition: border-color 300ms;
+		-moz-transition: border-color 300ms;
+		-o-transition: border-color 300ms;
+		-webkit-transition: border-color 300ms;
+}
+.contact .envelope .paper a {
+		color: #333;
+
+		transition: color 200ms;
+		-ms-transition: color 200ms;
+		-moz-transition: color 200ms;
+		-o-transition: color 200ms;
+		-webkit-transition: color 200ms;
+}
+.contact .envelope .paper a:hover {
+	color: #EEE;
+}
+.contact .envelope .paper a.call:hover .i {
+	border-color: #DDD;
+}
+.contact .envelope .paper a.mail .i {
+	position: absolute;
+	top: 0px;
+	left: 17px;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+}
