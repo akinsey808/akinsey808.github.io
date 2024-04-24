@@ -14,6 +14,11 @@ body {
 /*	overflow: hidden; */
 }
 
+#top {
+	position: fixed;
+	width: -webkit-fill-available;
+}
+
 #left {
 	left: 0;
 	top: 0;
