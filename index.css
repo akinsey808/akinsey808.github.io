@@ -85,22 +85,22 @@ body {
 }
 
 .p1 {
-	top: 1vw;
-	left: 1vw;
+	top: calc(50% - 10vw);
+	left: calc(2%);
 }
 
 .p2 {
-	top: 1vw;
+	top: calc(50% - 10vw);
 	right: 2vw;
 }
 
 .p3 {
-	bottom: 2vw;
+	bottom: 3vw;
 	left: 1vw;
 }
 
 .p4 {
-	bottom: 2vw;
+	bottom: 3vw;
 	right: 2vw;
 }
 
@@ -113,12 +113,14 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	font-family: "poppins-light";
-	font-size: 5vw;	
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-size: 9vw;	
+	top: 1vw;
 }
 
 #title2 {
-	top: 8vw;
+	top: 12vw;
 	font-size:4vw;
 }
 
