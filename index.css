@@ -156,6 +156,10 @@ body {
     font-size: 4vw;
 }
 
+#headshot {
+    padding-left: 15vw;
+}
+
 .page {
     opacity: 0;
     pointer-events: none;
