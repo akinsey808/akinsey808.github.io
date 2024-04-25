@@ -148,11 +148,11 @@ body {
 
 #title {
     font-size: 9vw;
+    top: 12vw;
 }
 
 #title2 {
     position: fixed;
-    top: 12vw;
     font-size: 4vw;
 }
 
