@@ -149,6 +149,8 @@ body {
 #title {
     font-size: 9vw;
     top: 12vw;
+    float: left;
+    display: inline;
 }
 
 #title2 {
@@ -159,6 +161,9 @@ body {
 
 #headshot {
     padding-left: 15vw;
+    width: 40%;
+    float: left;
+    display: inline;
 }
 
 .page {
