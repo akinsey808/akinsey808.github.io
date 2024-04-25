@@ -139,16 +139,19 @@ body {
 
 #title,
 #title2 {
-    position: absolute;
     width: 100%;
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 9vw;
     top: 1vw;
 }
 
+#title {
+    font-size: 9vw;
+}
+
 #title2 {
+    position: fixed;
     top: 12vw;
     font-size: 4vw;
 }
