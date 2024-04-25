@@ -151,6 +151,8 @@ body {
     top: 12vw;
     float: left;
     display: inline;
+    width: 40%;
+    padding-left: 15vw;
 }
 
 #title2 {
@@ -160,7 +162,6 @@ body {
 }
 
 #headshot {
-    padding-left: 15vw;
     width: 40%;
     float: left;
     display: inline;
