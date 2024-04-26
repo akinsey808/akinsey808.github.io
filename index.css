@@ -73,8 +73,8 @@ body {
 .back img {
     width: 20vw;
     height: 20vw;
-    position: absolute;
-}
+    position: relative;
+    display: inline-block;}
 
 /* flip speed goes here */
 .flipper {
