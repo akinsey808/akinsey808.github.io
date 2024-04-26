@@ -54,6 +54,9 @@ body {
 /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000;
+    position: relative;
+    display: inline-block;
+    margin: 2vw;
 }
 
 /* flip the pane when hovered */
@@ -113,28 +116,28 @@ body {
 }
 
 .p1 {
-    top: calc(50% - 10vw);
-    left: calc(2%);
+    top: 0;
+    left: 0;
 }
 
 .p2 {
-    top: calc(50% - 10vw);
-    right: 2vw;
+    top: 0;
+    right: 0;
 }
 
 .p3 {
-    bottom: 3vw;
-    left: 1vw;
+    bottom: 0;
+    left: 0;
 }
 
 .p4 {
-    bottom: 3vw;
-    right: 2vw;
+    bottom: 0;
+    right: 0;
 }
 
 .p5 {
-    top: calc(50% - 10vw);
-    left: calc(50% - 10vw);
+    top: 0;
+    left: 0;
 }
 
 #title,
