@@ -36,6 +36,11 @@ body {
     left: 15.5vw;
 }
 
+/* makes images fit */
+img {
+    object-fit: cover;
+}
+
 .button {
     font-family: "Poppins", sans-serif;
     background-color: transparent;
