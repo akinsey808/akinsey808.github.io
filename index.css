@@ -162,6 +162,8 @@ body {
     position: fixed;
     font-size: 3vw;
     background-color: white;
+    top: 0;
+    padding: 1vw;
 }
 
 #headshot {
