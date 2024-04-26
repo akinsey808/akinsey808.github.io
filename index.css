@@ -15,7 +15,8 @@ body {
 }
 
 #top {
-    position: fixed;
+    position: relative;
+    z-index: 1000;
     width: -webkit-fill-available;
 }
 
