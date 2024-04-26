@@ -148,7 +148,7 @@ body {
 
 #title {
     font-size: 9vw;
-    top: 12vw;
+    padding-top: 12vw;
     float: left;
     display: inline;
     width: 40%;
