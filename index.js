@@ -1,4 +1,4 @@
-var activePage = 'grades';
+var activePage = 'home';
 document.getElementById(activePage).classList.add('active-page');
 document.getElementById(activePage).classList.add('fade-in');
 
