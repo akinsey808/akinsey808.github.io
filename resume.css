@@ -239,3 +239,11 @@ header p {
   
   margin-left:1.25em;
 }
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #9e9e9e;
+}
