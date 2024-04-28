@@ -1,9 +1,4 @@
 @font-face {
-    font-family: BrownBagLunch;
-    src: url(BrownBagLunch.ttf);
-}
-
-@font-face {
     font-family: "poppins-light", sans-serif;
     src: url(/fonts/Poppins-Light.ttf);
     font-weight: 300;
