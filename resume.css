@@ -6,11 +6,18 @@ header {
   width:100%;
   vertical-align: middle;
   text-align: center;
- 
 }
 
 .header-content {
   display: inline-block;
+}
+
+.resume-wrapper {
+  position: absolute;
+  top: 10vw;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .pic {
@@ -21,30 +28,6 @@ header {
   background-size: 100% auto;
   transition : all 0.5s linear;
   
-}
-
-@-webkit-keyframes wiggle {
-  0%   {
-    transform: rotate(0deg);
-  }
-  25%  {
-    transform: rotate(-30deg);
-  }
-  50%  {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.pic:hover {
-  /*Webkit fix*/
-  -webkit-transform: translateZ(0);
-  
-  cursor:pointer;
-  
-  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .header-text {
@@ -255,12 +238,4 @@ header p {
   font-weight:400;
   
   margin-left:1.25em;
-}
-
-.highlight {
-  transition: border .33s ease-in;
-}
-
-.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
-  border-left:1px solid #9e9e9e;
 }
