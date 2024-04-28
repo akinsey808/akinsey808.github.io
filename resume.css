@@ -37,7 +37,7 @@ header {
 
 header p {
   text-align:center;
-  font-family: "Merriweather";
+  font-family: "Poppins";
   
   margin:0;
   
@@ -93,7 +93,7 @@ header p {
 }
 
 .content-cat {
-  font-family: "Merriweather";
+  font-family: "Libre Baskerville";
   font-variant:small-caps;
   font-weight:300;
   letter-spacing: 1px;
@@ -145,7 +145,7 @@ header p {
 }
 
 .content-text ul li {
-  font-family: "Open Sans";
+  font-family: "Libre Baskerville";
   font-size:0.7em;
   
   display:inline-block;
@@ -171,7 +171,7 @@ header p {
 }
 
 .work-listing p {
-  font-family: "Open Sans";
+  font-family: "Libre Baskerville";
   font-size:0.7em;
   font-weight:400;
   
@@ -185,7 +185,7 @@ header p {
 }
 
 .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
-  font-family: "Open Sans";
+  font-family: "Libre Baskerville";
   font-size:0.7em;
   font-weight:400;
   
