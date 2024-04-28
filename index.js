@@ -42,13 +42,13 @@ if (isSafari) {
   document.getElementsByTagName('html')[0].classList.add('safari');
 }
 
-var bt = document.querySelectorAll('#grades-button')[0];
+var bt = document.querySelectorAll('#home-button')[0];
 initBt2(bt);
-var bt2 = document.querySelectorAll('#skills-button')[0];
+var bt2 = document.querySelectorAll('#about-button')[0];
 initBt2(bt2);
-var bt3 = document.querySelectorAll('#advice-button')[0];
+var bt3 = document.querySelectorAll('#experience-button')[0];
 initBt2(bt3);
-var bt4 = document.querySelectorAll('#service-button')[0];
+var bt4 = document.querySelectorAll('#connect-button')[0];
 initBt2(bt4);
 
 // Button 2
