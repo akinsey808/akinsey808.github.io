@@ -188,6 +188,15 @@ table, th, td {
     border-color: gray;
 }
 
+table {
+    top: -40vw;
+    font-family: "Poppins";
+}
+
+iframe {
+    top:-40vw;
+}
+
 /*social media icon styling -- from Sanket Bodke https://codepen.io/sanketbodke/pen/LYymbRq?editors=1111*/
 .social-menu ul{
     position: absolute;
