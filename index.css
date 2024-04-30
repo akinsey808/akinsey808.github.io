@@ -183,6 +183,11 @@ img {
     pointer-events: auto;
 }
 
+table, th, td {
+    border: 1px solid;
+    border-color: gray;
+}
+
 /*social media icon styling -- from Sanket Bodke https://codepen.io/sanketbodke/pen/LYymbRq?editors=1111*/
 .social-menu ul{
     position: absolute;
