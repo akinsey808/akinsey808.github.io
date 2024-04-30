@@ -52,6 +52,10 @@ img {
     color: #459dda;
 }
 
+#funfact {
+    font-family: "Poppins";
+}
+
 /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000;
